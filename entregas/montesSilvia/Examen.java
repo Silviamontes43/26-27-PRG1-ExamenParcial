@@ -40,6 +40,7 @@ public class examen {
         int aprobadas = 0;
         int suspensas = 0;
         int notaMaxima = 0;
+        int notaMinima = 10;
 
        
         for (int i = 1; i <= asignaturas; i++) {
@@ -63,19 +64,25 @@ public class examen {
                 suspensas++;
             }
 
-        
+       
             if (nota > notaMaxima) {
                 notaMaxima = nota;
             }
+
+           
+            if (nota < notaMinima) {
+                notaMinima = nota;
+            }
         }
 
-    
+       
         double media = (double) suma / asignaturas;
 
         System.out.println("La media de las notas es: " + media);
         System.out.println("Asignaturas aprobadas: " + aprobadas);
         System.out.println("Asignaturas suspensas: " + suspensas);
         System.out.println("Nota mas alta: " + notaMaxima);
+        System.out.println("Nota mas baja: " + notaMinima);
 
         sc.close();
     }
