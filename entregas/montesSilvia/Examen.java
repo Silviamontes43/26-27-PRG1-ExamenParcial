@@ -6,8 +6,17 @@ public class examen {
 
         System.out.println("Examen parcial PRG1");
 
-        System.out.print("Introduce la edad del alumno: ");
-        int edad = sc.nextInt();
+        int edad;
+
+        do {
+            System.out.print("Introduce la edad del alumno (17-70): ");
+            edad = sc.nextInt();
+
+            if (edad < 17 || edad > 70) {
+                System.out.println("Edad no valida. Intentalo de nuevo.");
+            }
+
+        } while (edad < 17 || edad > 70);
 
         if (edad >= 18) {
             System.out.println("Es mayor de edad");
