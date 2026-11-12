@@ -1,10 +1,3 @@
-public class examen {
-    public static void main(String[] args) {
-        System.out.println("Examen parcial PRG1");
-    }
-}
-
-
 import java.util.Scanner;
 
 public class examen {
@@ -15,6 +8,12 @@ public class examen {
 
         System.out.print("Introduce la edad del alumno: ");
         int edad = sc.nextInt();
+
+        if (edad >= 18) {
+            System.out.println("Es mayor de edad");
+        } else {
+            System.out.println("Es menor de edad");
+        }
 
         sc.close();
     }
