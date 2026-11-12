@@ -36,10 +36,19 @@ public class examen {
 
         } while (asignaturas < 1 || asignaturas > 10);
 
+        int suma = 0;
+
         for (int i = 1; i <= asignaturas; i++) {
             System.out.print("Nota de la asignatura " + i + ": ");
             int nota = sc.nextInt();
+
+            suma = suma + nota;
         }
+
+        
+        double media = (double) suma / asignaturas;
+
+        System.out.println("La media de las notas es: " + media);
 
         sc.close();
     }
