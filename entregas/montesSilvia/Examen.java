@@ -42,7 +42,6 @@ public class examen {
         int notaMaxima = 0;
         int notaMinima = 10;
 
-       
         for (int i = 1; i <= asignaturas; i++) {
             int nota;
 
@@ -64,18 +63,16 @@ public class examen {
                 suspensas++;
             }
 
-       
             if (nota > notaMaxima) {
                 notaMaxima = nota;
             }
 
-           
             if (nota < notaMinima) {
                 notaMinima = nota;
             }
         }
 
-       
+  
         double media = (double) suma / asignaturas;
 
         System.out.println("La media de las notas es: " + media);
@@ -83,6 +80,13 @@ public class examen {
         System.out.println("Asignaturas suspensas: " + suspensas);
         System.out.println("Nota mas alta: " + notaMaxima);
         System.out.println("Nota mas baja: " + notaMinima);
+
+        
+        if (media >= 5 && notaMinima >= 4) {
+            System.out.println("Promociona");
+        } else {
+            System.out.println("Recupera");
+        }
 
         sc.close();
     }
