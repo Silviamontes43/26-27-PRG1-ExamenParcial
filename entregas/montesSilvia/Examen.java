@@ -38,7 +38,9 @@ public class examen {
 
         int suma = 0;
         int aprobadas = 0;
+        int suspensas = 0;
 
+     
         for (int i = 1; i <= asignaturas; i++) {
             System.out.print("Nota de la asignatura " + i + ": ");
             int nota = sc.nextInt();
@@ -47,13 +49,17 @@ public class examen {
 
             if (nota >= 5) {
                 aprobadas++;
+            } else {
+                suspensas++;
             }
         }
 
+        
         double media = (double) suma / asignaturas;
 
         System.out.println("La media de las notas es: " + media);
         System.out.println("Asignaturas aprobadas: " + aprobadas);
+        System.out.println("Asignaturas suspensas: " + suspensas);
 
         sc.close();
     }
